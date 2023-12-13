@@ -307,6 +307,8 @@ input {
   border: none;
   fill: none;
   background-color: transparent;
+  color: white;
+  text-transform: capitalize;
 }
 input:focus {
   background-color: transparent;
@@ -334,7 +336,7 @@ li {
   }
 }
 
-@media (max-width: 569px) {
+@media screen and (max-width: 480px) {
   .seller-section .cart-container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -374,7 +376,7 @@ li {
     flex-direction: column;
   }
 }
-@media (max-width: 1014px) and (min-width: 568px) {
+@media (max-width: 1014px) and (min-width: 480px) {
   .seller-section .cart-container {
     grid-template-columns: repeat(2, 1fr);
   }
