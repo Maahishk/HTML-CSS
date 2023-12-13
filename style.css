@@ -31,7 +31,7 @@ body::after {
 }
 nav {
   display: flex;
-  flex-direction: row;
+
   justify-content: space-between;
   text-transform: uppercase;
   position: absolute;
@@ -100,9 +100,7 @@ button {
 button:hover {
   background-color: var(--bg-btn);
 }
-section {
-  padding: 2rem 10rem 2rem 10rem;
-}
+
 .flex-container {
   width: 100%;
   display: flex;
@@ -133,7 +131,7 @@ section {
   }
 }
 
-/* Cart section css*/
+/* Cart css*/
 .cart-container {
   display: grid;
   justify-content: space-between;
@@ -181,9 +179,6 @@ section {
 }
 /*seller Section css*/
 .seller-section {
-  .cart-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
   .cart-img {
     width: 100%;
     height: 18rem;
@@ -201,7 +196,6 @@ section {
 /*feature section css*/
 .feature-section {
   .cart-container {
-    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     height: 100%;
   }
@@ -215,10 +209,10 @@ section {
 /*Shop section css*/
 .shop-section {
   background-color: var(--bg-grey);
-  padding: 5rem 10rem 5rem 10rem;
+
   display: grid;
   justify-content: space-between;
-  grid-template-columns: repeat(3, 1fr);
+
   grid-template-rows: min-content;
   height: fit-content;
   gap: 2rem;
@@ -269,7 +263,7 @@ section {
 footer {
   width: 100%;
   position: relative;
-  height: 70vh;
+
   background-color: var(--bg-color);
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
@@ -278,13 +272,9 @@ footer {
   overflow: hidden;
 }
 footer h1 {
-  position: absolute;
-  bottom: -60px;
-  left: -20px;
-  width: 100%;
   color: white;
   font-weight: 900;
-  font-size: 140px;
+
   text-transform: uppercase;
 }
 footer .footer-content {
@@ -335,14 +325,142 @@ li {
   }
 }
 .footer-bottom {
-  display: inline-flex;
+  display: flex;
   gap: 3rem;
   font-size: 12px;
-  position: absolute;
-  bottom: 40px;
-  right: 10%;
   text-transform: capitalize;
   & p {
     color: grey;
+  }
+}
+
+@media (max-width: 569px) {
+  .seller-section .cart-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .shop-section {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .feature-section .cart-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  nav {
+    flex-direction: column;
+  }
+  .flex-container {
+    flex-direction: column-reverse;
+  }
+  .space-man {
+    width: 100%;
+  }
+  .header-text {
+    width: 100%;
+  }
+  section {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  footer h1 {
+    font-size: 40px;
+  }
+  footer .footer-content {
+    flex-direction: column;
+  }
+  .footer-content .footer-faq {
+    flex-direction: column;
+  }
+  .footer-bottom {
+    position: relative;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1014px) and (min-width: 568px) {
+  .seller-section .cart-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .shop-section {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .feature-section .cart-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flex-container {
+    flex-direction: column-reverse;
+  }
+  .space-man {
+    width: 100%;
+  }
+  .header-text {
+    width: 100%;
+  }
+  section {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  footer h1 {
+    font-size: 80px;
+  }
+  footer .footer-content {
+    flex-direction: column;
+  }
+  .footer-content .footer-faq {
+    flex-direction: column;
+  }
+  .footer-bottom {
+    position: relative;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1015px) {
+  .seller-section .cart-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .shop-section {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5rem 10rem 5rem 10rem;
+  }
+  .feature-section .cart-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  nav {
+    flex-direction: row;
+  }
+  .flex-container {
+    flex-direction: row;
+  }
+  .space-man {
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    object-fit: contain;
+  }
+  .header-text {
+    width: 50%;
+  }
+  section {
+    padding: 2rem 10rem 2rem 10rem;
+  }
+  footer {
+    height: 70vh;
+  }
+  footer h1 {
+    font-size: 140px;
+    position: absolute;
+    bottom: -60px;
+    left: -20px;
+    width: 100%;
+  }
+  footer .footer-content {
+    flex-direction: row;
+  }
+  .footer-content .footer-faq {
+    flex-direction: row;
+  }
+  .footer-bottom {
+    flex-direction: row;
+    position: absolute;
+    bottom: 40px;
+    right: 10%;
   }
 }
